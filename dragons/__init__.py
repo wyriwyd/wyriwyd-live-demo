@@ -42,13 +42,13 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('name', type=str)
-    parser.add_argument('-b', '--backwards', action='store_true')
+    parser.add_argument('-r', '--reverse', action='store_true')
 
     args = parser.parse_args()
 
     dname = dragon_name(args.name)
 
-    if args.backwards:
+    if args.reverse:
         dname = dname[::-1].capitalize()
 
     print("Your dragon name is: {}".format(dname))

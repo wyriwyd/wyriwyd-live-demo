@@ -1,0 +1,9 @@
+language: python
+sudo: false
+python:
+- 3.6
+script:
+  - pip install git+https://github.com/wyriwyd/wyriwyd.git#egg=wyriwyd
+  - pip install .
+  - python3 setup.py test
+  - wyriwyd-test tutorial.md
